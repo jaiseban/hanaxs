@@ -1,0 +1,8 @@
+table.schemaName = "XS_THREAD";
+table.tableType = COLUMNSTORE;  
+table.description = "XS Thread meta data";
+table.columns = [ 
+	{name = "ID"; sqlType = BIGINT;},
+	{name = "NAME"; sqlType = NVARCHAR; length = 256;},
+	{name = "TIME"; sqlType = TIMESTAMP;}
+	];			

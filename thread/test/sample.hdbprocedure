@@ -1,0 +1,17 @@
+PROCEDURE "XS_THREAD"."thread.test::sample" ( in name varchar(100)) 
+	LANGUAGE SQLSCRIPT
+	SQL SECURITY INVOKER 
+	DEFAULT SCHEMA XS_THREAD
+	 AS
+	
+		count INTEGER;
+		
+BEGIN
+
+count := 1;
+WHILE :count < 100 DO
+	insert into "XS_THREAD"."thread.test::TEST" (id,name,time) values (:count,:name,current_timestamp);
+	count := :count + 1;
+END WHILE;
+
+END;

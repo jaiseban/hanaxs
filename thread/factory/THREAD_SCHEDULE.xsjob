@@ -1,0 +1,7 @@
+{
+"description": "Scheduler for threading fetaure",
+"action":"thread.factory:Thread.xsjs::execute",
+"schedules":[
+
+]
+} 
